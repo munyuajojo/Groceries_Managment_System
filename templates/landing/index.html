@@ -1,0 +1,96 @@
+{% extends '/Layouts/base.html'%}
+
+{% block pagetitle%}Home - Inventory Management system{% endblock %}
+
+{% block csslinks%} 
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel= "stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{%endblock%}
+
+
+    {% block content%} 
+    <div class="container">
+    
+      <div class="row justify-content-md-center ">
+          {% include '/includes/navbar.html' %} 
+        </div>
+    
+        <!-- <div class="row justify-content-md-center ">
+            {% include '/includes/carousel.html' %}     
+    </div> -->
+    
+
+    <div class="row justify-content-md-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"> <img src="/static/images/Peas-small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
+              <p class="card-text">Peas 1KG @ Ksh 40</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="/static/images/Beans-small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
+              <p class="card-text">Beans 1KG @ Ksh 80</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="/static/images/Carrots-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
+              <p class="card-text">Carrots 1KG @ Ksh 100</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> <img src="/static/images/Chillies-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
+          <p class="card-text">Chillies 1KG starting from Ksh 50</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><img src="/static/images/Lemons-Small640x480.jpg" class="img-fluid w-100 h-100 " alt="..."></h5>
+          <p class="card-text">Lemons 1KG starting from Ksh 40</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><img src="/static/images/Oranges-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
+          <p class="card-text">Oranges 1KG starting from Ksh 200</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+    
+    </div>
+
+
+{% endblock%}
+  </div>
+
+
+{% block jslinks%} {% endblock %}
