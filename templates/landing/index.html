@@ -1,6 +1,6 @@
 {% extends '/Layouts/base.html'%}
 
-{% block pagetitle%}Home - Inventory Management system{% endblock %}
+{% block pagetitle%}Home - Groceries Management system{% endblock %}
 
 {% block csslinks%} 
 <link rel="stylesheet" href="/static/css/main.css">
@@ -9,7 +9,7 @@
 
 
     {% block content%} 
-    <div class="container bg-dark ">
+    <div class="container bg-light ">
     
       <div class="row justify-content-md-center ">
           {% include '/includes/navbar.html' %} 
@@ -20,14 +20,73 @@
     </div> -->
     
 
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center mt-5">
       <div class="row">
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title"> <img src="/static/images/Peas-small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
               <p class="card-text">Peas 1KG @ Ksh 40</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+                  <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body"> <!--Start of Modal Body-->
+                      <form action="" method="POST"> <!--Start of form-->
+                        <div class="form-floating mb-3"> <!--Start of Email input-->
+                          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                          <label for="floatingInput">Email address</label>
+                        </div><!--End of Email input-->
+                        
+                        <div class="form-group"> <!--Start of select category-->
+                              <label for="">Select Category</label>
+                              <select name="category" id="" required class="form-control">
+                                <option></option>
+                                <option selected>Select Category</option>
+                                <option value="product">Product</option>
+                                <option value="service">Service</option>
+                              </select> <!--End of Select Category-->
+                        </div><!--End of Select Category-->
+
+                        <div class="form-group"> <!--Start of Buying Price form group-->
+                          <label for="">Buying Price</label>
+                          <input class="form control" type="text" name="bp" id="" required>
+                        </div> <!--End of Buying Price form group-->
+                              
+                        <div class="form-group"> <!--Start of Selling Price form group-->
+                          <label for="">Selling Price</label>
+                          <input class="form control" type="text" name="sp" id="" required>
+                        </div> <!--End of Selling Price form group-->
+
+                        <div class="from-group mt-3 d-flex justify-content-end"> <!--Start of Buttom form group-->
+                          <button class="btn btn-success" type="submit">Submit</button>
+                        </div> <!--End of Buttom form group-->   
+
+                      </form> <!--End of form-->
+                </div> <!--End of Modal Body-->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
             </div>
           </div>
         </div>
@@ -36,7 +95,36 @@
             <div class="card-body">
               <h5 class="card-title"><img src="/static/images/Beans-small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
               <p class="card-text">Beans 1KG @ Ksh 80</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+                  <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
             </div>
           </div>
         </div>
@@ -45,7 +133,36 @@
             <div class="card-body">
               <h5 class="card-title"><img src="/static/images/Carrots-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
               <p class="card-text">Carrots 1KG @ Ksh 100</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
             </div>
           </div>
         </div>
@@ -53,14 +170,43 @@
      
 </div>
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center mt-3">
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title"> <img src="/static/images/Chillies-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
           <p class="card-text">Chillies 1KG starting from Ksh 50</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+              <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
         </div>
       </div>
     </div>
@@ -69,7 +215,36 @@
         <div class="card-body">
           <h5 class="card-title"><img src="/static/images/Lemons-Small640x480.jpg" class="img-fluid w-100 h-100 " alt="..."></h5>
           <p class="card-text">Lemons 1KG starting from Ksh 40</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+                <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    form
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
         </div>
       </div>
     </div>
@@ -78,7 +253,36 @@
         <div class="card-body">
           <h5 class="card-title"><img src="/static/images/Oranges-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
           <p class="card-text">Oranges 1KG starting from Ksh 200</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
         </div>
       </div>
     </div>
@@ -86,14 +290,43 @@
  
 </div>
     
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center mt-3">
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title"> <img src="/static/images/Shallot-Onion-Small640x480.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
           <p class="card-text">Shallot Onion 1KG starting from Ksh 50</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+          <div class="container"> <!--Start of Modal container-->
+            <div class="row"> <!--Start of Modal row-->
+              <!--Modal-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Add to Cart  <i class="fas fa-shopping-cart"></i>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> <!--End of modal row-->
+          </div> <!--End of modal container-->
         </div>
       </div>
     </div>
@@ -102,7 +335,36 @@
         <div class="card-body">
           <h5 class="card-title"><img src="/static/images/White-Onion-Small640x427.jpg" class="img-fluid w-100 h-100 " alt="..."></h5>
           <p class="card-text">White Onion 1KG starting from Ksh 40</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+         <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+         <div class="container"> <!--Start of Modal container-->
+          <div class="row"> <!--Start of Modal row-->
+            <!--Modal-->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Add to Cart  <i class="fas fa-shopping-cart"></i>
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          </div> <!--End of modal row-->
+        </div> <!--End of modal container-->
         </div>
       </div>
     </div>
@@ -111,7 +373,36 @@
         <div class="card-body">
           <h5 class="card-title"><img src="/static/images/Tomatoes-Small640x427.jpg" class="img-fluid w-100 h-100" alt="..."></h5>
           <p class="card-text">Tomatoes 1KG starting from Ksh 200</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <!-- <a href="#" class="btn btn-primary">Add to Cart  <i class="fas fa-shopping-cart"></i></a> -->
+          
+              <div class="container"> <!--Start of Modal container-->
+                <div class="row"> <!--Start of Modal row-->
+                  <!--Modal-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Add to Cart  <i class="fas fa-shopping-cart"></i>
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div> <!--End of modal row-->
+              </div> <!--End of modal container-->
         </div>
       </div>
     </div>
