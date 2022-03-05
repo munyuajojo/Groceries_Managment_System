@@ -1,0 +1,74 @@
+{% extends '/Layouts/base.html'%}
+
+{% block pagetitle%}Cart - Groceries Management system{% endblock %}
+
+{% block csslinks%} 
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel= "stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{%endblock%}
+
+
+    {% block content%} 
+    <div class="container bg-light ">
+    
+      <div class="row justify-content-md-center ">
+          {% include '/includes/navbar.html' %} 
+        </div>
+    
+            
+            <!-- Modal -->
+
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">CheckOut Cart</h5>
+                    
+                  </div>
+        
+                  <div class="modal-body"> <!--Start of Modal Body-->
+                      <form action="" method="POST"> <!--Start of form-->
+                        <div class="form-floating mb-3"> <!--Start of Email input-->
+                          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                          <label for="floatingInput">Email address</label>
+                        </div><!--End of Email input-->
+                        
+                        <div class="form-group"> <!--Start of select category-->
+                              <label for="">Select Category</label>
+                              <select name="category" id="" required class="form-control">
+                                <option></option>
+                                <option selected>Select Category</option>
+                                <option value="product">Product</option>
+                                <option value="service">Service</option>
+                              </select> <!--End of Select Category-->
+                        </div><!--End of Select Category-->
+
+                        <div class="form-group"> <!--Start of Buying Price form group-->
+                          <label for="">Buying Price</label>
+                          <input class="form control" type="text" name="bp" id="" required>
+                        </div> <!--End of Buying Price form group-->
+                              
+                        <div class="form-group"> <!--Start of Selling Price form group-->
+                          <label for="">Selling Price</label>
+                          <input class="form control" type="text" name="sp" id="" required>
+                        </div> <!--End of Selling Price form group-->
+
+                        <div class="from-group mt-3 d-flex justify-content-end"> <!--Start of Buttom form group-->
+                          <button class="btn btn-success" type="submit">Submit</button>
+                        </div> <!--End of Buttom form group-->   
+
+                      </form> <!--End of form-->
+                </div> <!--End of Modal Body-->
+                  <div class="modal-footer">
+                
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+{% endblock%}
+
+
+
+{% block jslinks%} {% endblock %}
